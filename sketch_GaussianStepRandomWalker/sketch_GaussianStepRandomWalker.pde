@@ -46,7 +46,7 @@ class Walker {
 Walker w;
 
 void setup() {
-  size(640, 360);
+  size(1280, 720);
   w = new Walker();
   background(255);
 }
@@ -55,4 +55,3 @@ void draw() {
   w. step();
   w.display();
 }
-

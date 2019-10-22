@@ -15,8 +15,14 @@ class Walker {
   }
 
   void step() {
-    x = map(noise(tx), 0, 1, 0, width);
-    y = map(noise(ty), 0, 1, 0, height);
+    //x = map(noise(tx), 0, 1, 0, width);
+    //y = map(noise(ty), 0, 1, 0, height);
+
+    float xStepSize = map(noise(tx), 0, 1, -1, 1);
+    float yStepSize = map(noise(ty), 0, 1, -1, 1);
+
+    x += xStepSize;
+    y += yStepSize;
 
     tx += 0.01;
     ty += 0.01;
@@ -35,4 +41,3 @@ void draw() {
   w. step();
   w.display();
 }
-
